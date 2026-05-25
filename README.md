@@ -1,0 +1,2 @@
+# NutrIA
+proyecto de progra
