@@ -13,7 +13,7 @@ def obtener_datos_fatsecret(alimento: str) -> str:
     """Connects to FatSecret, searches for the food, and returns raw text info."""
     token_url = "https://oauth.fatsecret.com/connect/token"
     
-    # 1. Safely request the Access Token
+    
     try:
         response = requests.post(
             token_url,

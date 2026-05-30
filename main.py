@@ -4,26 +4,23 @@ from datetime import datetime
 from asistente import NutrIA
 from dotenv import load_dotenv
 
-
-
 load_dotenv()
 
 ARCHIVO_DIARIO = "diario_nutricional.json"
-
 def cargar_diario():
-    """Loads the food history from a JSON file."""
+   
     if os.path.exists(ARCHIVO_DIARIO):
         with open(ARCHIVO_DIARIO, "r", encoding="utf-8") as f:
             return json.load(f)
     return {}
 
 def guardar_diario(diario):
-    """Saves the food history to a JSON file."""
+    
     with open(ARCHIVO_DIARIO, "w", encoding="utf-8") as f:
         json.dump(diario, f, indent=4, ensure_ascii=False)
 
 def menu_registro_comida(fecha, diario, asistente):
-    """Sub-menu to log meals for a specific day."""
+    
     if fecha not in diario:
         diario[fecha] = []
         print(f"\nNew day created ({fecha})")
@@ -41,7 +38,7 @@ def menu_registro_comida(fecha, diario, asistente):
                 explicacion_ia = asistente.consultar_api_y_explicar(alimento)
                 print(f"\n NutrIA analyzed the API:\n{explicacion_ia}")
                 
-                # We keep the dictionary keys in Spanish as requested to maintain functional structures
+                
                 diario[fecha].append({"categoria": "API Search (FatSecret)", "alimento": alimento})
                 guardar_diario(diario)
                 print(f"\n '{alimento}' successfully registered in your diary for the day.")
@@ -66,23 +63,21 @@ def revisar_historial(diario):
     print(" " )
 
 def chat_asistente(asistente):
-    print("\nChat with NutrIA active. Ask anything, or type 'salir' to go back.")
+    print("\nChat with NutrIA active. Ask anything, or type 'out' to go back.")
     
     while True:
         entrada = input("\nYou: ").strip()
 
         if not entrada:
             continue
-        elif entrada.lower() == "salir": 
-            print("Returning to the main menu...")
+        elif entrada.lower() == "out": 
+            print("Returning to the main menu")
             break
         else:
             print(f"\nAssistant: {asistente.preguntar(entrada)}")
 
 def main():
-    print("Alberto Magana")
-    print("39435")
-    print(" ")
+   
 
     load_dotenv()
 
@@ -112,7 +107,7 @@ def main():
             chat_asistente(asistente)
             
         elif opcion == "4":
-            print("\nProgram finished successfully! Take care of your nutrition. 🏃‍♂️")
+            print("\nProgram finished successfully. ")
             break
             
         else:
@@ -120,3 +115,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    
