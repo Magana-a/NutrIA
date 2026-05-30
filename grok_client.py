@@ -1,5 +1,4 @@
-print("Alberto Magana")
-print("39435")
+
 
 
 import requests
