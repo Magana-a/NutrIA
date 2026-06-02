@@ -4,3 +4,7 @@ TOTALS | Cals: 1019.0 | Carbs: 155.6g | Protein: 66.4g | Fat: 24.8g
 - [API Search (FatSecret)] tacos | Cals: 203.0, Carbs: 18.13, Protein: 10.6, Fat: 9.85
 - [API Search (FatSecret)] sushi | Cals: 619.8, Carbs: 109.05, Protein: 35.97, Fat: 7.83
 
+DATE: 2026-06-01
+TOTALS | Cals: 117.0 | Carbs: 12.6g | Protein: 7.6g | Fat: 3.6g
+- [API Search (FatSecret)] BBQ | Cals: 117, Carbs: 12.56, Protein: 7.56, Fat: 3.56
+
