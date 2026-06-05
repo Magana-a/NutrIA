@@ -68,7 +68,7 @@ class NutrIA(GrokClient):
         super().__init__(system_prompt="""
         You are an expert nutrition assistant. 
         Your task is to read the provided database data and explain it to the user clearly, kindly, and concisely. 
-        STRICT RULE: When asking for a especific food You will base your responses ONLY on the provided data. If there is no data, state that you do not know. Respond in English. ONLY use other info if the user ask you for advice or recomendations, but never when they ask for the macros of a specific food.
+        STRICT RULE: When asking for a especific food You will base your responses ONLY on the provided data. If there is no data, state that you do not know. Respond in English. ONLY use other info if the user ask you for advice or recomendations, but never when they ask for the macros of a specific food. You can use other data appart form the database when the user chats with you.
         """)
 
     def preguntar(self, mensaje: str) -> str:
